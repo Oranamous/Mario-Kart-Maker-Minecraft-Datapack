@@ -1,0 +1,1 @@
+execute as @e[tag=item_box] if entity @a[distance=..1.5,scores={mk_maker.player.item_box=0},tag=!mk_maker.has_item] run function mk_maker:entity/item_box/use

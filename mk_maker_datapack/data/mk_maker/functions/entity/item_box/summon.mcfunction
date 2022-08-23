@@ -1,0 +1,1 @@
+summon item ~ ~ ~ {Item:{id:"minecraft:armor_stand",Count:1b,tag:{CustomModelData:1}},PickupDelay:-1,PeristenceRequired:1b,NoGravity:1b,Tags:["mk_maker","entity","item_box"]}
