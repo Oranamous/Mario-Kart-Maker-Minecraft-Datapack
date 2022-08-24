@@ -18,17 +18,15 @@ execute if entity @s[tag=!hit] run function mk_maker:vehicles/kart/move
 
 tp @e[tag=active_seat] ~ ~-0.6 ~ ~ ~
 
-execute if score @s speed matches ..-1 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■■■■■■■■","color":"aqua"},{"text":"]","color":"white"}]
-execute if score @s speed matches 0..9 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■■■■■■■■","color":"dark_gray"},{"text":"]","color":"white"}]
-execute if score @s speed matches 10..19 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■","color":"white"},{"text":"■■■■■■■■","color":"dark_gray"},{"text":"]","color":"white"}]
-execute if score @s speed matches 20..29 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■","color":"white"},{"text":"■■■■■■■","color":"dark_gray"},{"text":"]","color":"white"}]
-execute if score @s speed matches 30..39 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■","color":"white"},{"text":"■","color":"green"},{"text":"■■■■■■","color":"dark_gray"},{"text":"]","color":"white"}]
-execute if score @s speed matches 40..49 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■","color":"white"},{"text":"■■","color":"green"},{"text":"■■■■■","color":"dark_gray"},{"text":"]","color":"white"}]
-execute if score @s speed matches 50..59 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■","color":"white"},{"text":"■■■","color":"green"},{"text":"■■■■","color":"dark_gray"},{"text":"]","color":"white"}]
-execute if score @s speed matches 60..69 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■","color":"white"},{"text":"■■■","color":"green"},{"text":"■","color":"yellow"},{"text":"■■■","color":"dark_gray"},{"text":"]","color":"white"}]
-execute if score @s speed matches 70..79 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■","color":"white"},{"text":"■■■","color":"green"},{"text":"■","color":"yellow"},{"text":"■","color":"gold"},{"text":"■■","color":"dark_gray"},{"text":"]","color":"white"}]
-execute if score @s speed matches 80..89 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■","color":"white"},{"text":"■■■","color":"green"},{"text":"■","color":"yellow"},{"text":"■","color":"gold"},{"text":"■","color":"red"},{"text":"■","color":"dark_gray"},{"text":"]","color":"white"}]
-execute if score @s speed matches 90..99 run title @p[tag=riding_player] actionbar [{"text":"[","color":"white"},{"text":"■■","color":"white"},{"text":"■■■","color":"green"},{"text":"■","color":"yellow"},{"text":"■","color":"gold"},{"text":"■","color":"red"},{"text":"■","color":"dark_red"},{"text":"]","color":"white"}]
+execute if score @s speed matches ..-1 run title @p[tag=riding_player] actionbar {"text":"\uE009\uE000\uE009"}
+execute if score @s speed matches 0 run title @p[tag=riding_player] actionbar {"text":"\uE000"}
+execute if score @s speed matches 1..14 run title @p[tag=riding_player] actionbar {"text":"\uE001"}
+execute if score @s speed matches 15..28 run title @p[tag=riding_player] actionbar {"text":"\uE002"}
+execute if score @s speed matches 29..42 run title @p[tag=riding_player] actionbar {"text":"\uE003"}
+execute if score @s speed matches 43..56 run title @p[tag=riding_player] actionbar {"text":"\uE004"}
+execute if score @s speed matches 57..70 run title @p[tag=riding_player] actionbar {"text":"\uE005"}
+execute if score @s speed matches 71..84 run title @p[tag=riding_player] actionbar {"text":"\uE006"}
+execute if score @s speed matches 85..99 run title @p[tag=riding_player] actionbar {"text":"\uE007"}
 
 execute if score @s speed matches 64.. unless entity @p[tag=riding_player,tag=!wasd.s,tag=!wasd.a,tag=!wasd.d] run particle minecraft:smoke ^-0.5 ^ ^-1 0.1 0 0.1 0.01 4
 execute if score @s speed matches 64.. unless entity @p[tag=riding_player,tag=!wasd.s,tag=!wasd.a,tag=!wasd.d] run particle minecraft:smoke ^0.5 ^ ^-1 0.1 0 0.1 0.01 4
